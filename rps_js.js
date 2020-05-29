@@ -38,13 +38,10 @@
  }
 
 
-  const computerSelection = computerPlay();
   const results = document.querySelector('.results');
   const gameResult = document.createElement('div');
   gameResult.style.fontSize = '2em'
   gameResult.style.fontWeight = 'bold'
-
-  console.log(computerSelection)
 
   const rock = document.querySelector('#rock');
   rock.addEventListener('click', () => choice("rock"));
@@ -61,7 +58,7 @@
   }
   
   const play = document.querySelector('#play');
-  play.addEventListener('click', () => oneGame(RPS, computerSelection));
+  play.addEventListener('click', () => oneGame(RPS, computerPlay()));
 
   /*
 
